@@ -32,12 +32,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _counter = 0;
+  int _counter = 0;
   final counter = CounterBindings();
 
   void _incrementCounter() {
     setState(() {
-      counter.increment(_counter);
+      _counter = counter.increment(_counter);
     });
   }
 
