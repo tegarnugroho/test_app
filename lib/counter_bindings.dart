@@ -13,7 +13,7 @@ class CounterBindings {
 
   CounterBindings() {
     _lib = Platform.isWindows
-        ? DynamicLibrary.open('src/counter.dll')
+        ? DynamicLibrary.open('counter.dll')
         : DynamicLibrary.open('./libcounter.so');
 
     _increment = _lib
