@@ -14,7 +14,7 @@ class CounterBindings {
   CounterBindings() {
     _lib = Platform.isWindows
         ? DynamicLibrary.open('src/counter.dll')
-        : DynamicLibrary.open('src/libcounter.so');
+        : DynamicLibrary.open('./libcounter.so');
 
     _increment = _lib
         .lookup<NativeFunction<IncrementCFunc>>('increment')
